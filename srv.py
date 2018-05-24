@@ -17,8 +17,9 @@ def mainpage():
 def newstory():
     return render_template('story.html')
 
-@app.route('/story/<story_id>')
+@app.route('/story/<story_id>', methods=['POST'])
 def storypage(story_id):
     return render_template('storypage.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
